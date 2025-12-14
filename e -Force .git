@@ -1,0 +1,181 @@
+[33mcommit 7d919cdd6f9869342992831df68c3ac2f89810c7[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: ragadeep01 <ragadeepyadav01@gmail.com>
+Date:   Sun Dec 14 14:14:16 2025 +0530
+
+    feat(auth): implement authentication APIs and tests
+    
+    - Added signup, login, and logout APIs
+    - Configured test database connection
+    - Wrote Jest + Supertest test cases for authentication
+    
+    Co-authored-by: ChatGPT <AI@users.noreply.github.com>
+
+back-end/app.js
+back-end/config/db.js
+back-end/index.js
+back-end/jest.config.mjs
+back-end/tests/auth.test.js
+package.json
+
+[33mcommit 7b9b4b7627b102193747c0f6503cd19a8bb07ce1[m
+Author: ragadeep01 <ragadeepyadav01@gmail.com>
+Date:   Sun Dec 14 13:03:19 2025 +0530
+
+    test: refine authentication test cases
+    
+    Improved test coverage and edge case handling for auth APIs.
+    
+    Co-authored-by: ChatGPT <AI@users.noreply.github.com>
+
+back-end/tests/auth.test.js
+
+[33mcommit b3e73a10b92cc811c0c128009961785d5e890738[m
+Author: ragadeep01 <ragadeepyadav01@gmail.com>
+Date:   Sun Dec 14 12:54:49 2025 +0530
+
+    test: add authentication test cases
+    
+    Used an AI assistant to generate the initial structure and test scenarios for signup, login, and logout APIs. Reviewed and adapted the tests to match the project requirements.
+    
+    Co-authored-by: ChatGPT <AI@users.noreply.github.com>
+
+back-end/tests/auth.test.js
+
+[33mcommit f756d0947a2a350efe2ac09efcab6c2ec4768a3e[m
+Merge: b37a631 96c5c31
+Author: ragadeep01 <ragadeepyadav01@gmail.com>
+Date:   Sun Dec 14 12:20:55 2025 +0530
+
+    initial projec setup
+
+[33mcommit b37a631537a4ee1193a892f8719ea51ba060a668[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: ragadeep01 <ragadeepyadav01@gmail.com>
+Date:   Tue Jul 8 23:54:21 2025 +0530
+
+    Initial commit
+
+.gitignore
+back-end/config/db.js
+back-end/controllers/contractController.js
+back-end/controllers/contractFarmController.js
+back-end/controllers/userController.js
+back-end/controllers/wishlistControllers.js
+back-end/index.js
+back-end/middlewares/asyncHandler.js
+back-end/middlewares/authMiddleware.js
+back-end/middlewares/roleMiddleware.js
+back-end/middlewares/upload.js
+back-end/models/bufferOffer.js
+back-end/models/contractInfo.js
+back-end/models/crop.js
+back-end/models/user.js
+back-end/models/wishList.js
+back-end/routes/contractFarmRoutes.js
+back-end/routes/contractRoutes.js
+back-end/routes/diseaseDetection.js
+back-end/routes/predict_disease.py
+back-end/routes/userRoutes.js
+back-end/routes/wishlistRoutes.js
+back-end/utils/createToken.js
+front-end/.gitignore
+front-end/README.md
+front-end/eslint.config.js
+front-end/index.html
+front-end/package.json
+front-end/public/1.jpeg
+front-end/public/4.jpeg
+front-end/public/AdobeStock_302109913_Video_HD_Preview.mov
+front-end/public/AllFruits.png
+front-end/public/Plant-Disease-Concept.webp
+front-end/public/about_left.jpg
+front-end/public/apple.png
+front-end/public/contract_farming.jpg
+front-end/public/crop_background.jpg
+front-end/public/crop_disease.jpg
+front-end/public/crop_disease.webp
+front-end/public/crop_recomm.jpg
+front-end/public/farm.jpg
+front-end/public/fertilizer_recom.jpg
+front-end/public/fruits.png
+front-end/public/header_img.jpeg
+front-end/public/iot.jpg
+front-end/public/mango.png
+front-end/public/nuts.png
+front-end/public/olive-oil.png
+front-end/public/passport.jpg
+front-end/public/spices.png
+front-end/public/tomato.webp
+front-end/public/vegetable.png
+front-end/public/vite.svg
+front-end/public/welcome frame.png
+front-end/public/wheat-sack.png
+front-end/src/App.css
+front-end/src/App.jsx
+front-end/src/Components/Authen.jsx
+front-end/src/Components/Category.jsx
+front-end/src/Components/Contracts.jsx
+front-end/src/Components/ContractsModel.jsx
+front-end/src/Components/FarmerComp/AvailableListings.jsx
+front-end/src/Components/FarmerComp/Buyer-listings.jsx
+front-end/src/Components/FarmerComp/Cards.jsx
+front-end/src/Components/FarmerComp/CropAddForm.jsx
+front-end/src/Components/FarmerComp/Navbar.jsx
+front-end/src/Components/Footer.jsx
+front-end/src/Components/Header.jsx
+front-end/src/Components/Loader.jsx
+front-end/src/Components/Navbar.jsx
+front-end/src/Components/Profile.jsx
+front-end/src/Components/Recommendation.jsx
+front-end/src/Styles.css
+front-end/src/assets/react.svg
+front-end/src/connections/user.js
+front-end/src/farmerstyles.css
+front-end/src/index.css
+front-end/src/main.jsx
+front-end/src/pages/CategoryPage.jsx
+front-end/src/pages/ContractsPage.jsx
+front-end/src/pages/Dashboard.jsx
+front-end/src/pages/LandingPage.jsx
+front-end/src/pages/RecommendationDetails.jsx
+front-end/src/pages/SearchResults.jsx
+front-end/src/pages/WishlistPage.jsx
+front-end/src/pages/buyer-homePage.jsx
+front-end/src/pages/farmerHomePage.jsx
+front-end/src/pages/farmerPages/ContractFarming.jsx
+front-end/src/pages/farmerPages/CropRecommendation.jsx
+front-end/src/pages/farmerPages/Cropdiseaseprediction.jsx
+front-end/src/pages/farmerPages/Farmercontract.jsx
+front-end/src/pages/farmerPages/FertilizerRecommen.jsx
+front-end/src/pages/farmerPages/Home.jsx
+front-end/src/pages/sem fsd.html
+front-end/vite.config.js
+package.json
+uploads/1745137623904.jpeg
+uploads/1745223389935-1dbc3729-aa02-46fb-9276-79a382f62026___Com.G_TgS_FL 7951_newPixel25.JPG
+uploads/1745233967371-0401adc0-0998-4d8e-90de-4eae8caf4248___RS_Erly.B 8446.JPG
+uploads/1745234188977-0401adc0-0998-4d8e-90de-4eae8caf4248___RS_Erly.B 8446.JPG
+uploads/1745234199880-0401adc0-0998-4d8e-90de-4eae8caf4248___RS_Erly.B 8446.JPG
+uploads/1745235022524-1e02dbef-ecc2-4c1b-ae5a-b90057505574___RS_Erly.B 9475.JPG
+uploads/1745235155508-1e02dbef-ecc2-4c1b-ae5a-b90057505574___RS_Erly.B 9475.JPG
+uploads/1745235746793-1e02dbef-ecc2-4c1b-ae5a-b90057505574___RS_Erly.B 9475.JPG
+uploads/1745309563128.jpg
+uploads/1746602401519.jpg
+uploads/1746616951239.jpeg
+uploads/1746617091158.jpeg
+uploads/1746617229964.webp
+uploads/1746617458154.jpg
+uploads/1746617583506.webp
+uploads/1746618499384.avif
+uploads/1746983720874.jpeg
+uploads/1747031375351.jpg
+uploads/1747720820200.jpg
+uploads/1747721234507.webp
+uploads/1747722449915.webp
+
+[33mcommit 96c5c319c3f0466d7ed74ed6d67a0cfdc20b2be4[m
+Author: ragadeep01 <ragadeepyadav01@gmail.com>
+Date:   Tue Jul 8 23:23:08 2025 +0530
+
+    Initial commit
+
+README.md
