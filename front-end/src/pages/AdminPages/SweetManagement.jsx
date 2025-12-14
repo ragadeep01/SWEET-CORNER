@@ -9,11 +9,11 @@ const SweetMan = () => {
   const [showModal, setShowModal] = useState(false);
 
   const [crops, setCrops] = useState([]);
-useEffect(() => {
-  if (user.role !== "admin") {
-    navigate("/");
-  }
-}, []);
+// useEffect(() => {
+//   if (user.role !== "admin") {
+//     navigate("/");
+//   }
+// }, []);
 
   useEffect(() => {
     const fetchCrops = async () => {
