@@ -6,7 +6,7 @@ import path from "path";
 
 import userRoutes from "./routes/userRoutes.js";
 import contractRoutes from "./routes/orderRoutes.js";
-import contractFarmRoutes from "./routes/contractfarmRoutes.js";
+import contractFarmRoutes from "./routes/sweetRoutes.js";
 
 dotenv.config();
 
@@ -27,13 +27,19 @@ app.use(
 // static uploads
 app.use("/uploads", express.static(path.join(process.cwd(), "uploads")));
 
-// ---------------- ROUTES ----------------
 app.use("/api", userRoutes);
-app.use("/api/v1/contractfarm", contractFarmRoutes);
-app.use("/api/v1/contract", contractRoutes);
+app.use("/api", contractFarmRoutes);
+app.use("/api", contractRoutes);
 
 app.get("/", (req, res) => {
   res.send("API is running...");
+});
+app.use((err, req, res, next) => {
+  const statusCode = res.statusCode === 200 ? 500 : res.statusCode;
+
+  res.status(statusCode).json({
+    message: err.message,
+  });
 });
 
 export default app;
