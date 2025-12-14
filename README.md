@@ -10,81 +10,80 @@ The project follows Test-Driven Development (TDD) principles and demonstrates cl
 🚀 Features 
 
 👤 Authentication
-User Registration
-User Login
-JWT-based Authentication
-Role-based access (User / Admin)
+- User Registration
+- User Login
+- JWT-based Authentication
+- Role-based access (User / Admin)
 
 🍭 Sweets Management
-Add new sweets (Admin)
-View all available sweets
+- Add new sweets (Admin)
+- View all available sweets
 
 Search sweets by:
-Name
-Category
-Price range
+- Name
+- Category
+- Price range
 
-Update sweet details (Admin)
-Delete sweets (Admin)
+- Update sweet details (Admin)
+- Delete sweets (Admin)
 
 
 📦 Inventory Management
-Purchase sweets (quantity decreases)
-Restock sweets (Admin only)
-Purchase button disabled when stock is 0
+- Purchase sweets (quantity decreases)
+- Restock sweets (Admin only)
+- Purchase button disabled when stock is 0
 
 
 🧪 Test-Driven Development
-Backend logic implemented using TDD
-Clear Red → Green → Refactor flow in commit history
+- Backend logic implemented using TDD
 
 🛠️ Tech Stack
 Backend: 
-Node.js
-Express.js
-MongoDB (Mongoose)
-JWT Authentication
-Jest + Supertest for testing
+- Node.js
+- Express.js
+- MongoDB (Mongoose)
+- JWT Authentication
+- Jest + Supertest for testing
 
 Frontend:
-React.js
-CSS (custom styling, no Tailwind)
-Fetch API for backend communication
+- React.js
+- CSS (custom styling, no Tailwind)
+- Fetch API for backend communication
 
 Tools & Workflow:
-Git & GitHub
-Postman (API testing)
-VS Code
+- Git & GitHub
+- Postman (API testing)
+- VS Code
 
 ⚙️ Setup & Installation
 🔧 Prerequisites:
-Node.js (v18+ recommended)
-MongoDB (local)
-Git
+   - Node.js (v18+ recommended)
+   - MongoDB (local)
+   - Git
 
 Backend Setup:
-cd backend
-npm install
+- cd backend
+- npm install
 
 Run the backend server:
-npm run back-end
+- npm run back-end
 
 Frontend Setup:
-cd frontend
-npm install
-npm run front-end
+- cd frontend
+- npm install
+- npm run front-end
 
 Frontend will run on:
-http://localhost:5173
+- http://localhost:5173
 
 for frontend: 
-npm run front-end
+- npm run front-end
 
 to run entire application:
-npm run fullstack
+- npm run fullstack
 
 for testing:
-npm test
+- npm test
 
 Screenshots:
 
