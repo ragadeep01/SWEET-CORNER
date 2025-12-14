@@ -10,7 +10,7 @@ function CategoryPage() {
 
   const categories = [
     { name: "INDIAN SWEETS", image: "/indian_icon.jpg" },
-    { name: "DRY FRUIT", image: "/dryfruit_icon.png" },
+    { name: "DRY FRUIT", image: "/dryfruit_icon.jpg" },
     { name: "HALWA", image: "/halwa_icon.jpg" },
     { name: "SUGAR FREE", image: "/sugarfree.jpg" }
   ];

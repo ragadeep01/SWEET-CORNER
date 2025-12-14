@@ -92,11 +92,11 @@ const SweetOrdersPage = () => {
           </div>
 
           <div className="active-contracts-content">
-            {orders.filter(o => o.status === "delivered").length === 0 ? (
+            {orders.filter(o => o.status === "completed").length === 0 ? (
               <p>No past orders</p>
             ) : (
               orders
-                .filter(o => o.status === "delivered")
+                .filter(o => o.status === "completed")
                 .map(renderOrderCard)
             )}
           </div>
