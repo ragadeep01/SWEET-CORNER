@@ -1,0 +1,620 @@
+
+body{
+    padding-top: 20px;
+  }
+  .blur {
+    filter: blur(3px);
+    transition: 0.3s ease-in-out;
+  }
+  .navbar {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10000;
+  }
+  
+  .navbar-logo {
+    font-size: 31px;
+    font-weight: bold;
+    color: rgba(1, 1, 1, 0.855);
+    margin-bottom: 25px; 
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    width: 100%;
+    position: relative; 
+    gap: 30px; 
+  }
+  
+  
+  .navbar-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+  }
+  /* .contact-button{
+    border: none;
+    padding: 5px;
+  } */
+  
+  
+  .contact-button,
+  .login {
+    background-color: transparent;
+    border: 1x solid rgb(0, 0, 0);
+    padding: 10px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  
+  .contact-button:hover,
+  .login:hover {
+    background-color: #A2AF7F;
+    color: white;
+    transition: 0.3s ease;
+  }
+  
+  
+  .login {
+    position: absolute;
+    right: 50px;
+    /* font-weight: bold; */
+  }
+  
+  .navbar-links li {
+    cursor: pointer;
+    color: rgb(0, 0, 0); 
+    transition: color 0.5s ease;
+  }
+  .navbar-links li:hover {
+    color: #A2AF7F; 
+    text-decoration: underline;
+  }
+  .navbar-links a{
+    text-decoration: none; 
+    color: inherit; 
+    transition: color 0.2s ease;
+  }
+  
+  
+  /* About.css */
+  .aboutt {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #a2af7f;
+      padding: 80px;
+      gap: 50px;
+    }
+    
+    .aboutt-content {
+      flex: 1;
+      padding: 20px;
+      max-width: 450px;
+      color: white;
+      margin-left: 200px;
+    }
+    
+    .aboutt-content h1 {
+      font-size: 2.7rem;
+      color: #ffffff;
+    }
+    
+    .aboutt-content h3 {
+      margin-top: 10px;
+      font-size: 25px;
+      color: #fffffff2;
+    }
+    
+    .aboutt-content p {
+      font-size: 1.3rem;
+      color: #fffefedd;
+      line-height: 1.5;
+      margin-top: 10px;
+    }
+    .aboutt-image {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      overflow: hidden;
+    }
+    
+    .aboutt-image img {
+      padding: 5px;
+      margin-right: 160px;
+      margin-left: 20px;
+      width: 400px;
+      height: 550px;
+      object-fit: cover;
+      background-size: cover;
+      background-position: center;
+      display: block;
+      max-width: 500px;
+      position: relative;
+      border-radius: 20px;
+    }
+  
+    /* Auth.css */
+    
+  .modall-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6); 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      backdrop-filter: blur(5px);
+      z-index: 1000;
+    }
+    
+  
+    .modall-content {
+      /* margin: 50px; */
+      /* top: 50px; */
+      background: white;
+      padding: 25px;
+      padding-bottom: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      width: 350px;
+      height: 398px;
+      text-align: center;
+      position: relative;
+    }
+    
+  
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 27px;
+      cursor: pointer;
+      padding: 5px;
+    }
+    
+    .modall-content h1{
+      color: #a2af7f;
+      /* margin-bottom: 10px; */
+      text-align: center;
+    }
+  
+    .modall-content h2 {  
+      margin-left: 35px;
+      /* margin-bottom: 10px; */
+      font-size: 24px;
+    }
+    .modall-content p{
+      /* padding-bottom: 15px; */
+    }
+  
+   .modall-content input, select {
+      width: 90%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    
+  
+    .login-btn, .signup-btn {
+      width: 97%;
+      padding: 10px;
+      background: #1fe44de1;
+      color: white;
+      border: none;
+      font-size: 18px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    
+    .login-btn:hover, .signup-btn:hover {
+      background: #218838;
+    }
+    
+  
+    .error-message {
+      color: red;
+      font-size: 14px;
+      margin-bottom: 10px;padding: 5px;
+    }
+    
+  
+    .switch-auth {
+      margin-top: 5px;
+      /* margin-bottom: ; */
+      padding: 5px;
+      padding-bottom: 10px;;
+  
+    }
+    
+    .switch-auth span {
+      color: #007bff;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    
+    .switch-auth span:hover {
+      text-decoration: underline;
+    }
+     .modall-contentt {
+      height: 500px;
+    }
+    
+    /* Cards.css */
+  
+  /* Card container */
+  
+  /* 
+  /* Contact.css */
+  .contact-container {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 30px;
+      background: #9696963f;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .contact-title {
+      font-size: 28px;
+      color: #a2af7f;
+      font-weight: bold;
+      text-align: center;
+    }
+    
+    .contact-subtitle {
+      text-align: center;
+      color: #000000;
+      margin-bottom: 20px;
+    }
+    
+    .contact-form label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: #000000;
+    }
+    
+    .contact-form span {
+      color: red;
+    }
+    
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #c5c5b0;
+      border-radius: 5px;
+      background: white;
+      font-size: 16px;
+    }
+    
+    .contact-form textarea {
+      height: 80px;
+      resize: none;
+    }
+    
+    .submit-btn {
+      width: 100%;
+      padding: 12px;
+      background: #a2af7f;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    
+    .submit-btn:hover {
+      background: #87925e;
+    }
+    
+    /* Home.css */
+    .home-content img{
+      height: 70vh;
+      width:50vw;
+      display: flex;
+  }
+  .home-content{
+      display: flex;
+      align-items: center;
+      margin-top: 15px;
+      gap: 20px;
+  }
+  .text-content h1{
+      font-size: 40px;
+      color: #A2AF7F;
+      margin-left: 20px;
+      margin-top: 20px;
+  }
+  .text-content p{
+      font-size: 25px;
+      color: #000000c8;
+      margin-left: 20px;
+      margin-top: 20px;
+  }
+  .get-started{
+      background-color: #A2AF7F;
+      color: white;
+      padding: 15px 20px;
+      border: 1PX ;
+      border-radius: 25px;
+      font-size: 20px;
+      cursor: pointer;
+      margin-left: 20px;
+      margin-top: 20px;
+  }
+  .get-started a{
+      text-decoration: none;
+      color: white;
+  }
+  
+  /* Navbar.css */
+  
+  body{
+      padding-top: 20px;
+    }
+    .navbar {
+      display: flex;
+      flex-direction: column; 
+      align-items: center;
+      padding: 20px;
+      background-color: white;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 10000;
+    }
+    
+    .logo {
+      font-size: 31px;
+      font-weight: bold;
+      color: rgba(1, 1, 1, 0.855);
+      margin-bottom: 25px; 
+    }
+    
+    .nav-container {
+      display: flex;
+      justify-content: center; 
+      align-items: center;
+      width: 100%;
+      position: relative; 
+      gap: 30px; 
+    }
+    
+    
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+      padding: 0;
+      margin: 0;
+      font-size: 18px;
+    }
+    
+    .contact-button,
+    .login {
+      background-color: transparent;
+      border: 1x solid rgb(0, 0, 0);
+      padding: 10px 16px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    
+    
+    .contact-button:hover,
+    .login:hover {
+      background-color: #A2AF7F;
+      color: white;
+      transition: 0.3s ease;
+    }
+    
+    
+    .login {
+      position: absolute;
+      right: 50px;
+    }
+    
+    .nav-links li {
+      cursor: pointer;
+      color: rgb(0, 0, 0); 
+      transition: color 0.5s ease;
+    }
+    .nav-links li:hover {
+      color: #A2AF7F; 
+      text-decoration: underline;
+    }
+    .nav-links a{
+      text-decoration: none; 
+      color: inherit; 
+      transition: color 0.2s ease;
+    }
+  
+    /* Servies.css */
+    .servicess-container {
+      width: 95%;
+      margin: auto;
+      font-family: "Arial", sans-serif;
+    }
+    
+    .top-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      padding-top: 100px;
+    }
+    
+    .servicess-text {
+     
+      margin-left: 120px;
+      padding-left: 120px;
+      text-align: center;
+      justify-content: center;
+    }
+    
+    .servicess-text h2 {
+      /* padding: 5px; */
+      text-align: left;
+      font-size: 28px;
+      color: #556b2f;
+      
+    }
+    
+    .servicess-text p {
+      text-align: left;
+      padding-top: 10px;
+      font-size: 20px;
+      color: #666;
+      
+    }
+    
+    .servicess-grid {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 100px;
+      row-gap: 30px;
+      padding:0px 100px 0px 230px;
+    }
+    
+    .servicess-card {
+  
+      width: 450px;
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    
+    .servicess-card img {
+      width: 100%;
+      object-fit: cover;
+    }
+    
+    .servicess-content {
+      padding: 15px;
+    }
+    
+    .servicess-content h3 {
+      padding: 5px;
+      font-size: 18px;
+      color: #333;
+    }
+    
+    .servicess-content p {
+      padding: 5px;
+      font-size: 14px;
+      color: #666;
+    }
+    
+    .servicess-content button {
+      background-color: #8aa85c;
+      color: rgb(255, 255, 255);
+      border: none;
+      padding: 8px 15px;
+      margin-top: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    .modal-overlay {
+      position: fixed;
+      top: 0px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.897);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 100000;
+    }
+    
+    .modal-content {
+      background: rgb(252, 252, 252);
+      padding: 20px;
+      border-radius: 10px;
+      width: 850px;
+      height: 600px;
+      text-align: center;
+      display: flex;
+      position: relative;
+    }
+    
+    .close-button {
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      font-size: 30px;
+      cursor: pointer;
+    }
+    
+    .modal-img {
+      margin-top: 70px;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      object-fit: cover;
+      padding: 5px;
+    }
+    .modal-text{
+      max-width: 400px;
+      padding: 25px;
+    }
+    .modal-text h2 {
+      text-align: left;
+      margin: 3px;
+      right: 0px;
+      padding: 5px;
+      font-size: 20px;
+      color: #121212d8;
+    }
+    
+    .modal-text p {
+      line-height: 1.5;
+      margin: 3px;
+      padding: 5px;
+      font-size: 14px;
+      color: #666;
+      text-align: left;
+  
+      
+    }
+    .contract-farming-card{
+     
+      width: 450px;
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      margin-right: 215px;
+    }
+    .contract-farming-card img {
+      width: 100%;
+      object-fit: cover;
+    }

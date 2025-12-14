@@ -1,0 +1,768 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    /* background: #f4f7f6; */
+    color: #333;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+header {
+    background: lightblue;
+    text-align: center;
+}
+
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: lightblue;
+    color: white;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar {
+    padding: 10px 15px;
+    font-size: 16px;
+    width: 500px;
+    border: 2px solid #003b4a;
+    border-radius: 5px;
+    outline: none;
+    padding-right: 40px; 
+}
+
+.search-icon {
+    position: absolute;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+
+
+
+.profile-container {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 220px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    display: none;
+    z-index: 10;
+}
+
+.profile-container .dropdown-menu {
+    display: block;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* .profile-info {
+    flex: 1;
+} */
+
+.name {
+    color: black;
+    font-weight: bold;
+}
+
+.email {
+    font-size: 12px;
+    color: gray;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+    background: #f0f0f0;
+}
+
+.logout {
+    color: red;
+}
+
+
+.header-image {
+    width: 100%;
+    height: 500px;
+}
+.contracts-btn:hover{
+    background-color:#003644bb;
+    cursor: pointer;
+}
+.contracts-btn{
+    background-color: #003b4a;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+
+  display: block;
+  margin: 10px auto;
+  
+}
+.nav {
+    display: flex;
+    justify-content: center;
+    /* padding: 10px; */
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.nav button {
+    color: #fff;
+    padding: 15px 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    background: lightslategray;
+    border-radius: 5px;
+}
+
+.categories-section {
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+    background-color: beige;
+    width: 90%;
+    height: auto;
+    border-radius: 5px;
+    padding: 0px 25px 25px 25px;
+}
+
+.categories-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 30px;
+}
+
+.categories-heading {
+    /* height: 10px; */
+    text-align: center;
+    margin: 25px;
+}
+
+.category {
+    width: 70px;
+    height: 55px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.category-img img {
+    width: 55px;  
+    height: 55px; 
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.category-title h3 {
+    margin-top: 5px;
+    font-size: 14px;
+    text-align: center;
+    padding: 10px;
+}
+
+.recommendation-page{
+    top: 0;
+}
+
+.recommendations {
+    text-align: center;
+    padding: 40px 0;
+    /* transition: transform 0.3s ease-in-out; */
+
+}
+
+
+.search-results-container {
+   margin: 55px;
+}
+
+.recommendations-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+
+.recommendation-crops {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.recommendation {
+    transition: transform 0.3s ease-in-out;
+}
+
+.recommendation:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+
+.recommendation {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* align-items: center;  */
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    /* width: calc(14.5% - 20px); */
+    /* height: 250px; */
+    width: 13vw;
+    height: auto;
+    /* min-height: 227px; */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+} 
+
+
+.recommendation img {
+    width: 100%;
+    /* height: auto; */
+    height: 130px;
+    object-fit: cover;
+    margin-bottom: 5px;
+
+    border-radius: 5px;
+}
+
+.recommendation p {
+    margin-top: 10px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.recommendation-content p{
+    padding-top: 5px;
+    font-size: 15px;
+    color: #555;
+    margin: 5px 0;
+    text-align: left;
+}
+
+
+.recommendation-section {
+    flex-grow: 1;
+    padding-left: 20px;
+}
+
+.recommendation-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: #333;
+}
+
+.recommendation-crops {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+    align-content: flex-start;
+    width: 100%;
+    padding: 45px;
+}
+
+/* .recommendation-crops {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; 
+  gap: 20px;
+} */
+
+.recommendation {
+    transition: transform 0.3s ease-in-out;
+}
+
+.recommendation:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+  
+.recommendation-container {
+    flex-grow: 1;
+    padding: 7px;
+    margin-right: 5px;
+}
+
+
+
+.details-container {
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: white;
+  }
+
+.details-image{
+    overflow: hidden;
+}
+  
+  .details-image img {
+    width: 500px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(69, 68, 68, 0.468);
+}
+  
+  .details-content {
+    border: 1px solid rgba(215, 209, 209, 0.856);
+    width: 300px;
+    height: 360px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+
+  
+  .details-button {
+    background: #5cd077;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-right: 20px;
+  }
+  
+  .chat-button {
+    background: #2762ecc2;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-right: 20px;
+  }
+
+
+
+.category:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.category-page-container {
+    display: flex;
+    flex-direction: column;
+    /* min-height: 100vh; */
+    width: 100%;
+  }
+
+.category-page {
+    display: flex;
+    /* flex-grow: 1; */
+    width: 100%;
+  }
+  
+  .sidebar {
+    width: 250px;
+    min-width: 200px;
+    background: #f4f4f4;
+    padding: 10px;
+    min-height: 100vh;
+    overflow-y: auto;
+    border-right: 2px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+  }
+  
+  .sidebar h3 {
+    margin-bottom: 15px;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    transition: background 0.2s;
+  }
+  
+  .sidebar ul li:hover,
+  .sidebar ul li.active {
+    background: lightgray;
+  }
+.sidebar-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+
+
+.contracts-page-container {
+    margin: 20px 80px 20px 80px;
+}
+
+.active-contracts-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.active-contracts-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.active-contract-card {
+    background: #a6a0a026;
+    max-width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 17px;
+    width: 100%;
+    box-shadow: 2px 2px 0px #00000082;
+    cursor: pointer;
+   
+}
+
+
+.active-contracts-content-left {
+    flex: 1;
+}
+
+.active-contracts-content-right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.active-contracts-content-right button {
+    width: 120px;
+    height: 35px;
+    border-radius: 7px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+/* .button end-btn{
+    background-color: #ff3c3c;
+    padding: 50px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 20px;
+} */
+ 
+.end-btn{
+    padding: 0px 10px;
+  margin-top: 10px;
+    background-color: rgba(255, 60, 60, 0.782);
+    /* padding: 30px; */
+}
+.view-btn{
+    background-color: #20f150;
+}
+.view-btn:hover{
+    background-color: #048a23;
+}
+.end-btn:hover {
+    background-color: red;
+}
+
+.active-contracts-content p {
+    font-size: 18px;
+    margin: 5px 0;
+}
+    .view-detailss{
+    background-color: #aeb8b0;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-right: 20px;
+    margin-top: 10px;
+
+    }
+
+.profile-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(0.35px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contract-profile-container {
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid rgb(123, 123, 123);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.9); /* Slight transparency */
+    border-radius: 20px;
+    background-color: #fff;
+    position: relative;
+}
+
+
+.contract-profile img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ccc;
+}
+
+
+.profile-chat button {
+    width: 70px;
+    height: 30px;
+    background-color: #20f150;
+    border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+
+}
+
+.profile-chat :hover{
+    background-color: #048a23;
+}
+
+.rating {
+    border: 1px solid grey;
+    border-radius: 3px;
+}
+
+
+
+.contract-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+  }
+  
+  .contract-popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+  }
+  
+  .contract-popup-content h3 {
+    margin-bottom: 15px;
+  }
+  
+  .contract-popup-content label {
+    display: block;
+    margin: 10px 0;
+  }
+  
+  .popup-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+  
+
+  /* ContractModal.css */
+
+.contract-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* dark semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .contract-modal {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  .contract-modal h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  
+  .contract-modal label {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 0.3rem;
+    font-weight: 500;
+  }
+  
+  .contract-modal input,
+  .contract-modal textarea {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    resize: vertical;
+  }
+  
+  .contract-modal textarea {
+    height: 80px;
+  }
+  
+  .modal-actions {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  
+  .modal-actions button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  
+  .modal-actions button:hover {
+    opacity: 0.9;
+  }
+  
+  .modal-actions .cancel {
+    background-color: #ccc;
+    color: #333;
+  }
+  
+  .modal-actions button:not(.cancel) {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      transform: scale(0.95);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+
+  .detect-container {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .detect-container input,
+  .detect-container button {
+    margin: 1rem;
+    padding: 0.5rem 1rem;
+  }
+  
+  
