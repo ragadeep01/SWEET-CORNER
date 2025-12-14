@@ -132,3 +132,17 @@ Order Details(Buyer-side):
 <img width="1280" height="610" alt="image" src="https://github.com/user-attachments/assets/fd07aa96-bb3c-4b71-9a7e-9054aaf80c00" />
 <img width="1280" height="553" alt="image" src="https://github.com/user-attachments/assets/8977fc30-0f86-4e81-9398-87cf781c61d5" />
 
+
+My AI Usage
+
+AI Tools Used
+- ChatGPT
+- GitHub Copilot
+
+How I Used AI
+- Helped write unit test cases for backend APIs using Jest and Supertest, which I then reviewed and adapted to match my business logic.
+- Assisted in debugging runtime and logical errors, especially during API integration and edge-case handling.
+- Suggested cleaner code structure and refactoring ideas to improve readability, maintainability, and adherence to clean coding principles.
+- Assisted in styling frontend pages and structuring UI components, including layout organization and improving visual consistency.
+
+  
