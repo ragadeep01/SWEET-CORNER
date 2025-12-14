@@ -96,7 +96,7 @@ const SignUp = ({ setShowSignUp, setShowLogin }) => {
       setError('Passwords do not match');
       return;}
     try {
-      const response = await fetch('http://localhost:3000/api/authh/signup', {
+      const response = await fetch('http://localhost:3000/api/auth/signup', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name, email, password,role: userType }),
