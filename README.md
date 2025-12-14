@@ -17,15 +17,12 @@ The project follows Test-Driven Development (TDD) principles and demonstrates cl
 
 🍭 Sweets Management
 - Add new sweets (Admin)
+- Update sweet details (Admin)
+- Delete sweets (Admin)
 - View all available sweets
-
 Search sweets by:
 - Name
 - Category
-- Price range
-
-- Update sweet details (Admin)
-- Delete sweets (Admin)
 
 
 📦 Inventory Management
@@ -47,7 +44,7 @@ Backend:
 
 Frontend:
 - React.js
-- CSS (custom styling, no Tailwind)
+- CSS (custom styling)
 - Fetch API for backend communication
 
 Tools & Workflow:
@@ -65,25 +62,41 @@ Backend Setup:
 - cd backend
 - npm install
 
-Run the backend server:
+To run the backend server:
 - npm run back-end
 
 Frontend Setup:
 - cd frontend
 - npm install
-- npm run front-end
 
+To run the frontend: 
+- npm run front-end
+  
 Frontend will run on:
 - http://localhost:5173
 
-for frontend: 
-- npm run front-end
-
-to run entire application:
+To run the entire application:
 - npm run fullstack
 
 for testing:
 - npm test
+
+Test-Driven Development Evidence:
+
+Initial Test Execution (Red Phase – Expected Failures):
+<img width="786" height="157" alt="image" src="https://github.com/user-attachments/assets/4790b9a5-2c9a-418c-a2f3-e6e5821ebab8" />
+
+- This screenshot represents the initial test execution during the Red phase of Test-Driven Development (TDD).
+At this stage, 2 test suites and 3 test cases failed, which is expected behavior since the corresponding features had not yet been implemented or fully completed.
+These failing tests were intentionally written first to define the expected behavior of the system.
+
+
+Final Test Execution (Green Phase – All Tests Passing)
+<img width="871" height="311" alt="image" src="https://github.com/user-attachments/assets/1fc7907a-65ca-4971-807b-a5d5f0cbbf8b" />
+
+-This screenshot shows the final test execution after implementing the required functionality and refactoring the code.
+All previously failing test cases were fixed, and all test suites and test cases passed successfully, confirming the correctness and stability of the implementation.
+
 
 Screenshots:
 
@@ -146,3 +159,9 @@ How I Used AI
 - Assisted in styling frontend pages and structuring UI components, including layout organization and improving visual consistency.
 
   
+Reflection on AI Impact on My Workflow
+- Using AI tools significantly improved my development workflow by accelerating repetitive tasks and providing timely guidance during problem-solving. These tools were especially helpful in identifying small naming mismatches, minor logical inconsistencies, and subtle integration issues that can otherwise take a considerable amount of time to detect during manual debugging.
+- AI also assisted in writing  test cases, particularly by suggesting test structures and edge-case scenarios during the Test-Driven Development process. This support helped me validate functionality earlier and improve overall test coverage. Additionally, AI reduced time spent on boilerplate setup, initial UI structuring, and styling, allowing me to focus more on implementing core features and business logic.
+- Although AI was actively used throughout the development process, the overall system design, feature ideas, and complete working logic were entirely conceived and implemented by me. AI served strictly as a development assistant rather than a decision-maker. All AI-generated suggestions were carefully reviewed, refined, and integrated with full understanding.
+- Overall, this experience demonstrated how AI can be used responsibly to enhance productivity, improve code quality, and significantly reduce debugging time, while preserving full ownership and understanding of the solution.
+
