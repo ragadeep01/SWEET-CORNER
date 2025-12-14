@@ -138,3 +138,26 @@ npm run fullstack
 for testing
 
 npm test
+
+Screenshots
+
+Landing Page:
+![WhatsApp Image 2025-12-14 at 10 09 59 PM](https://github.com/user-attachments/assets/b868c5a4-7d33-4d6e-8331-6710ec1d9801)
+<img width="1280" height="592" alt="image" src="https://github.com/user-attachments/assets/09b1a186-6b6f-4b01-82a1-8a4c6a2c610c" />
+
+Dashboard(Admin):
+<img width="1280" height="578" alt="image" src="https://github.com/user-attachments/assets/05f39465-ea31-4a0a-bce1-bc291fcdeebb" />
+
+Add Sweet:
+<img width="1280" height="585" alt="image" src="https://github.com/user-attachments/assets/3beed535-8def-46e1-9f33-9c408cb58e3c" />
+
+Dashboard(Buyer):
+<img width="1280" height="587" alt="image" src="https://github.com/user-attachments/assets/c1239ffe-9b13-419e-9964-d21283f2f290" />
+
+Category-wise:
+<img width="1280" height="584" alt="image" src="https://github.com/user-attachments/assets/52389b61-d3eb-496c-a88a-1c94ee859a72" />
+
+Order Details(Buyer-side):
+<img width="1280" height="610" alt="image" src="https://github.com/user-attachments/assets/fd07aa96-bb3c-4b71-9a7e-9054aaf80c00" />
+<img width="1280" height="553" alt="image" src="https://github.com/user-attachments/assets/8977fc30-0f86-4e81-9398-87cf781c61d5" />
+
