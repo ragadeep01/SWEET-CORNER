@@ -121,6 +121,10 @@ Category-wise:
 <img width="1280" height="584" alt="image" src="https://github.com/user-attachments/assets/52389b61-d3eb-496c-a88a-1c94ee859a72" />
 
 
+Search Feature(Customer):
+![WhatsApp Image 2025-12-14 at 10 28 10 PM](https://github.com/user-attachments/assets/f7e54a6c-125f-412c-bcb2-c8fe7ec691e8)
+
+
 Customer can order sweets:
 <img width="1280" height="580" alt="image" src="https://github.com/user-attachments/assets/ca55cd85-2f40-43c2-aae6-e0de44a2a91a" />
 
