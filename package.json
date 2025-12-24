@@ -7,7 +7,7 @@
     "back-end": "nodemon back-end/index.js",
     "front-end": "cd front-end && npm run dev",
     "model": "python back-end/routes/predict_disease.py",
-    "test": "cross-env NODE_ENV=test node --experimental-vm-modules node_modules/jest/bin/jest.js --runInBand"
+    "test": "cross-env NODE_ENV=test node --experimental-vm-modules node_modules/jest/bin/jest.js --config back-end/jest.config.mjs --runInBand"
 
 
   },
@@ -35,5 +35,8 @@
     "cross-env": "^10.1.0",
     "jest": "^30.2.0",
     "supertest": "^7.1.4"
-  }
+  },
+    "babel-jest": "^30.2.0",
+    "@babel/core": "^7.24.0",
+    "@babel/preset-env": "^7.24.0"
 }

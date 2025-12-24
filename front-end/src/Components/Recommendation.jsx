@@ -11,7 +11,7 @@ function Recommendation({ sweet }) {
   // console.log(sweet.image);
   const imageUrl = sweet.image
     ? `http://localhost:3000${sweet.image}`
-    : "/apple.png"; // Default image if none provided
+    : "/apple.png"; 
 
   return (
     <div className="recommendation" onClick={handleClick}>

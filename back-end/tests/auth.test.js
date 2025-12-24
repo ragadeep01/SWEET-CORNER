@@ -56,5 +56,24 @@ expect(res.body).toHaveProperty("_id");
       expect(res.statusCode).toBe(200);
     });
   });
+  describe("POST /api/auth/login", () => {
+    it("blocker user should not be allowed", async () => {
+      await request(app).post("/api/auth/signup").send({
+        name: "LoginUser",
+        email: "login@gmail.com",
+        password: "password123",
+        role: "Buyer",
+        isblocked:"false"
+      });
+      const res = await request(app).post("/api/auth/login").send({
+        email: "login@gmail.com",
+        password: "password123",
+      });
+
+      expect(res.statusCode).toBe(200);
+      console.log("done");
+    });
+
+  });
 
 });

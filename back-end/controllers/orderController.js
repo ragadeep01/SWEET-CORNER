@@ -1,14 +1,9 @@
-import asyncHandler from "../middlewares/asyncHandler.js";
 import Sweet from "../models/sweets.js";
 import Order from "../models/order.js";
 
-/**
- * PURCHASE A SWEET
- * POST /api/sweets/:id/purchase
- */
 // export const purchaseSweet = asyncHandler(async (req, res) => {
 //   const sweetId = req.params.id;
-//   const { quantity } = req.body; // requestedQuantity from frontend
+//   const { quantity } = req.body; 
 
 //   if (!quantity || quantity <= 0) {
 //     res.status(400);
@@ -26,11 +21,10 @@ import Order from "../models/order.js";
 //     throw new Error("Not enough stock available");
 //   }
 
-//   // Reduce stock (but do NOT delete product)
+// 
 //   sweet.quantity -= quantity;
 //   await sweet.save();
 
-//   // Snapshot stored exactly at purchase time
 //   const sweetSnapshot = {
 //     name: sweet.name,
 //     category: sweet.category,
@@ -52,120 +46,122 @@ import Order from "../models/order.js";
 // });
 
 
-export const purchaseSweet = asyncHandler(async (req, res) => {
-  const sweetId = req.params.id;
-  const { quantity} = req.body;
+export const purchaseSweet = async (req, res, next) => {
+  try {
+    const sweetId = req.params.id;
+    const { quantity } = req.body;
 
-  if (!quantity || quantity <= 0) {
-    res.status(400);
-    throw new Error("Invalid quantity");
+    if (!quantity || quantity <= 0) {
+      return res.status(400).json({ message: "Invalid quantity" });
+    }
+
+    const sweet = await Sweet.findById(sweetId);
+    if (!sweet) {
+      return res.status(404).json({ message: "Sweet not found" });
+    }
+
+    if (sweet.quantity < quantity) {
+      return res.status(400).json({ message: "Not enough stock available" });
+    }
+
+    sweet.quantity -= quantity;
+    await sweet.save();
+
+    const sweetSnapshot = {
+      name: sweet.name,
+      category: sweet.category,
+      price: sweet.price,
+      image: sweet.image,
+    };
+
+    const totalAmount = quantity * sweet.price;
+
+    const order = await Order.create({
+      sweetId,
+      customerId: req.user._id,
+      sweetSnapshot,
+      quantity,
+      totalAmount,
+      status: "pending",
+    });
+
+    return res.status(201).json(order);
+  } catch (err) {
+    return next(err);
   }
+};
 
-  const sweet = await Sweet.findById(sweetId);
-  if (!sweet) {
-    res.status(404);
-    throw new Error("Sweet not found");
+export const getPendingOrders = async (req, res, next) => {
+  try {
+    const orders = await Order.find({ status: "pending" }).populate("customerId");
+    return res.status(200).json(orders);
+  } catch (err) {
+    return next(err);
   }
+};
 
-  if (sweet.quantity < quantity) {
-    res.status(400);
-    throw new Error("Not enough stock available");
+export const getPreparingOrders = async (req, res, next) => {
+  try {
+    const orders = await Order.find({ status: "preparing" }).populate("customerId");
+    return res.status(200).json(orders);
+  } catch (err) {
+    return next(err);
   }
+};
 
-  // decrease stock
-  sweet.quantity -= quantity;
-  await sweet.save();
-
-  // snapshot created at order time
-  const sweetSnapshot = {
-    name: sweet.name,
-    category: sweet.category,
-    price: sweet.price,
-    image: sweet.image,
-  };
-
-  const totalAmount = quantity * sweet.price;
-
-  const order = await Order.create({
-    sweetId,
-    customerId: req.user._id,
-    sweetSnapshot,
-    quantity,
-    totalAmount,
-
-    status: "pending",
-  });
-
-  res.status(201).json(order);
-});
-
-/**
- * GET PENDING ORDERS
- * GET /api/orders/pending
- */
-export const getPendingOrders = asyncHandler(async (req, res) => {
-  const orders = await Order.find({ status: "pending" })
-    .populate("customerId");
-  res.status(200).json(orders);
-});
-
-export const getPreparingOrders = asyncHandler(async (req, res) => {
-  const orders = await Order.find({ status: "preparing" })
-    .populate("customerId");
-  res.status(200).json(orders);
-});
-
-export const getDeliveredOrders = asyncHandler(async (req, res) => {
-  const orders = await Order.find({ status: "completed" })
-    .populate("customerId");
-  res.status(200).json(orders);
-});
-
-
-
-
-/**
- * START PREPARING ORDER
- * PUT /api/orders/:id/start
- */
-export const startPreparingOrder = asyncHandler(async (req, res) => {
-  const order = await Order.findById(req.params.id);
-
-  if (!order) {
-    res.status(404);
-    throw new Error("Order not found");
+export const getDeliveredOrders = async (req, res, next) => {
+  try {
+    const orders = await Order.find({ status: "completed" }).populate("customerId");
+    return res.status(200).json(orders);
+  } catch (err) {
+    return next(err);
   }
+};
 
-  order.status = "preparing";
-  await order.save();
 
-  res.status(200).json({ message: "Order moved to preparing stage", order });
-});
 
-/**
- * DELIVER ORDER
- * PUT /api/orders/:id/deliver
- */
-export const deliverOrder = asyncHandler(async (req, res) => {
-  const order = await Order.findById(req.params.id);
+export const startPreparingOrder = async (req, res, next) => {
+  try {
+    const order = await Order.findById(req.params.id);
 
-  if (!order) {
-    res.status(404);
-    throw new Error("Order not found");
+    if (!order) {
+      return res.status(404).json({ message: "Order not found" });
+    }
+
+    order.status = "preparing";
+    await order.save();
+
+    return res.status(200).json({ message: "Order moved to preparing stage", order });
+  } catch (err) {
+    return next(err);
   }
+};
 
-  order.status = "completed";
-  await order.save();
 
-  res.status(200).json({ message: "Order delivered successfully", order });
-});
+export const deliverOrder = async (req, res, next) => {
+  try {
+    const order = await Order.findById(req.params.id);
 
-/**
- * GET USER’S ORDERS (optional)
- * GET /api/orders/my
- */
-export const getUserOrders = asyncHandler(async (req, res) => {
-  const orders = await Order.find({ customerId: req.user._id });
-  res.status(200).json(orders);
-});
+    if (!order) {
+      return res.status(404).json({ message: "Order not found" });
+    }
+
+    order.status = "completed";
+    await order.save();
+
+    return res.status(200).json({ message: "Order delivered successfully", order });
+  } catch (err) {
+    return next(err);
+  }
+};
+
+
+export const getUserOrders = async (req, res, next) => {
+  try {
+    const orders = await Order.find({ customerId: req.user._id });
+    return res.status(200).json(orders);
+  } catch (err) {
+    return next(err);
+  }
+};
 

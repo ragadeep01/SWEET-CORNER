@@ -4,7 +4,6 @@ import { createUser, loginUser,logOutCurrentUser , getCurrentUserProfile,updateC
 import authenticate from '../middlewares/authMiddleware.js';
 
 // import{authenticate} from '../middleware/authMiddleware.js'
-// back-end\middlewares\authMiddleware.js
 const router = express.Router();
 
 router.route("/auth/signup").post(createUser);
